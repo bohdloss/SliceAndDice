@@ -16,7 +16,7 @@ class WetAir(properties: Properties) : AirBlock(properties) {
         @JvmStatic
         fun check(level: Level, pos: BlockPos): Boolean {
             val mutable = pos.mutable()
-            var above = 1
+            var above = 0
             while(true) {
                 mutable.y = pos.y + above
                 val state = level.getBlockState(mutable)
